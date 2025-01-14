@@ -1,5 +1,5 @@
 # Software Engineering Training - Orange Digital Center  
-
+<img src = "https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif">
 ## Overview  
 This repository contains the tasks, projects, and notes from my **Software Engineering Training** at **Orange Digital Center**. The training covered foundational and advanced topics in database systems, web frameworks, software design, and development workflows.  
 
