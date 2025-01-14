@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %} Profile {% endblock %}
+
+{% block content %}
+<div style="display: flex; flex-direction: column; justify-content: space-between;">
+    <h1> Welcome Admin, {{ current_user.name }}</h1>
+    <h2>You can use one option from the following : </h2>
+    <h3>Blog Management</h3>
+    <ul>
+        <li><a href="/blog/">View Blogs</a></li>
+        <li><a href="/blog/create">Create Blogs</a></li>
+        <li><a href="/blog/{{id}}/edit">Edit Blog</a></li>
+        <li><a href="">Delete Blog</a></li>
+    </ul>
+    <h3>User Management</h3>
+        <ul>
+            <li><a href="">Promote User</a></li>
+        </ul>
+        <h3>Logout</h3>
+        <ul>
+            <a href="{{ url_for('auth.logout') }}">Logout</a>
+        </ul>
+</div>
+
+<div>
+    
+</div>
+{% endblock %}

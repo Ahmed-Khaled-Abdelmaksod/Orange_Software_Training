@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %} Edit Product {% endblock %}
+
+{% block content %}
+<form action="/blog/{{blog.id}}" method="POST" class="form">
+    {{ form.title.label }}
+    {{ form.title(size=20, value=product.name) }}
+
+    {% if form.title.errors %}
+        <span class="error-message">{{ form.title.errors[0] }}</span>
+    {% endif %}
+
+    {{ form.description.label }}
+    {{ form.discription(value=blog.description) }}
+
+    {% if form.discription.errors %}
+        <span class="error-message">{{ form.discription.errors[0] }}</span>
+    {% endif %}
+    {{ form.description.label }}
+    {{ form.discription(value=blog.description) }}
+
+    {% if form.discription.errors %}
+        <span class="error-message">{{ form.discription.errors[0] }}</span>
+    {% endif %}
+    {{ form.csrf_token }}
+
+    <input type="submit" value="Edit">
+</form>
+{% endblock %}

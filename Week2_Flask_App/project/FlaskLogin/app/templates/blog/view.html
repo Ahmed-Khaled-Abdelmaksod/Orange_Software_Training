@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %} View Product {% endblock %}
+
+{% block content %}
+<p>
+    <h3>{{blog.title}}</h3>
+    <p>{{blog.description}}</p>
+    <ul>
+        <li>{{blog.likes}} Likes</li>
+        <li>{{blog.dislikes}} Dislikes</li>
+    </ul>
+    <hr>
+    <br>
+</p>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %} Create Product {% endblock %}
+
+{% block content %}
+<form action="{{ url_for('blog.store') }}" method="POST" class="form">
+    {{ form.title.label }}
+    {{ form.title }}
+
+    {% if form.title.errors %}
+        <span class="error-message">{{ form.name.errors[0] }}</span>
+    {% endif %}
+
+    {{ form.description.label }}
+    {{ form.description }}
+
+    {% if form.description.errors %}
+        <span class="error-message">{{ form.description.errors[0] }}</span>
+    {% endif %}
+
+    {{ form.csrf_token }}
+
+    <input type="submit" value="Create">
+</form>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+<h1>Blogs</h1>
+<p>
+    {% for blog in blogs %}
+        <h3>{{blog.title}}</h3>
+        <p>{{blog.description}}</p>
+        <ul>
+            <li>{{blog.likes}} Likes</li>
+            <li>{{blog.dislikes}} Dislikes</li>
+            <form action="blog/like">
+                <label for="likes">Like</label>
+                <input type="checkbox" name="likes">
+            </form>
+            <form action="blog/unlike">   
+                <label for="unlike" >Unlike</label>
+                <input type="checkbox" name="unlike">
+            </form>
+        </ul>
+        <hr>
+    {% endfor %}
+    <br>
+</p>
+{% endblock %}

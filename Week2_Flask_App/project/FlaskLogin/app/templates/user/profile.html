@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %} Profile {% endblock %}
+
+{% block content %}
+<div style="display: flex; flex-direction: row; justify-content: space-between;">
+    <h1> Welcome, {{ current_user.name }}</h1>
+    <a href="{{ url_for('auth.logout') }}">Logout</a>
+</div>
+
+<div>
+    <ul>
+        <li><a href="">Show Blogs</a></li>
+        
+    </ul>
+</div>
+{% endblock %}
